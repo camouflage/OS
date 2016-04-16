@@ -1,0 +1,6 @@
+test.exe
+testNo.exe
+mspaint.exe
+python3.exe
+C:\Windows\System32\notepad.exe
+C:\Windows\System32\notepadNo.exe
