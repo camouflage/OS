@@ -2,6 +2,9 @@
 #include <cstdio>
 #include <cstdlib>
 #include <windows.h>
+#include <psapi.h>
+// Requires linker: -lpsapi
+
 using namespace std;
 
 // Global variables for buffer info.
@@ -12,8 +15,6 @@ int in;
 int out;
 
 // Global variables for performance evaluation.
-int producerSleep;
-int consumerSleep;
 int producerRealOp;
 int consumerRealOp;
 int producerTotalOp;
@@ -29,6 +30,8 @@ HANDLE Mutex;
 HANDLE Empty;
 HANDLE Full;
 
+// size of KB
+const int KB = 1024; 
 
 // Insert function
 int insert(int item) {
@@ -85,7 +88,6 @@ inline void removeCriticalSection() {
 DWORD WINAPI producer0(LPVOID param) {
 	while ( true ) {
 		int timeToSleep = rand() % 1000;
-		producerSleep += timeToSleep;
 		Sleep(timeToSleep);
 
 		insertCriticalSection();
@@ -123,7 +125,6 @@ DWORD WINAPI producer2(LPVOID param) {
 DWORD WINAPI consumer0(LPVOID param) {
 	while ( true ) {
 		int timeToSleep = rand() % 1000;
-		consumerSleep += timeToSleep;
 		Sleep(timeToSleep);
 
 		removeCriticalSection();
@@ -157,39 +158,110 @@ DWORD WINAPI consumer2(LPVOID param) {
 }
 
 
+// Initiate variables
+void init() {
+	counter = 0;
+	in = 0;
+	out = 0;
+	producerRealOp = 0;
+	producerTotalOp = 0;
+	consumerRealOp = 0;
+	consumerTotalOp = 0;
+} 
+
+// Ref: http://stackoverflow.com/questions/63166/how-to-determine-cpu-and-memory-consumption-from-inside-a-process
+void displayPerformance() {
+	// Output buffer.
+	cout << "Complete!" << endl;
+	cout << counter << " elements remained in buffer: " << endl;
+	for ( int i = 0; i < counter; ++i ) {
+		cout << buffer[i] << " ";
+	}
+	cout << endl << endl;
+	
+	
+	// Output # of operations perfromed.
+	cout << "===========Operations Performed==========" << endl
+		 << "# of operations performed by producers: " << producerRealOp << endl
+		 << "# of operations tried by producers: " << producerTotalOp << endl
+		 << "# of operations performed by consumers: " << consumerRealOp << endl
+		 << "# of operations tried by consumers: " << consumerTotalOp << endl << endl;
+	
+	
+	// Calculate memory usage.
+	
+	// Total virtual memory
+	MEMORYSTATUSEX memInfo;
+    memInfo.dwLength = sizeof(MEMORYSTATUSEX);
+    GlobalMemoryStatusEx(&memInfo);
+    DWORDLONG totalVirtualMem = memInfo.ullTotalPageFile;
+    // Virtual memory being used
+    DWORDLONG virtualMemUsed = memInfo.ullTotalPageFile - memInfo.ullAvailPageFile;
+    // Virtual Memory used by current process
+    PROCESS_MEMORY_COUNTERS_EX pmc;
+    // Error solved by Ref: https://social.msdn.microsoft.com/Forums/en-US/720198c4-04a2-4737-9159-6e23a217d6b7/question-about-getprocessmemoryinfo?forum=Vsexpressvc 
+    GetProcessMemoryInfo(GetCurrentProcess(), (PROCESS_MEMORY_COUNTERS*)&pmc, sizeof(pmc));
+    SIZE_T virtualMemUsedByMe = pmc.PrivateUsage;
+    
+    cout << "==========Virtual Memory Usage==========" << endl
+		 << "There are " << totalVirtualMem / KB << " KBytes of virtual memory" << endl
+		 << "Among which " << virtualMemUsed / KB << " KBytes are being used" << endl
+		 << "And " << virtualMemUsedByMe / KB << " KBytes are used by current process" << endl
+		 << "Usage rate is: " << virtualMemUsedByMe * 100.0 / virtualMemUsed << "%" << endl << endl;
+		 
+	// Total physical memory
+	DWORDLONG totalPhysMem = memInfo.ullTotalPhys;
+    // Physical memory being used
+    DWORDLONG physMemUsed = memInfo.ullTotalPhys - memInfo.ullAvailPhys;
+    // Physical Memory used by current process
+    SIZE_T physMemUsedByMe = pmc.WorkingSetSize;
+    
+    cout << "==========Physical Memory Usage==========" << endl
+		 << "There are " << totalPhysMem / KB << " KBytes of physical memory" << endl
+		 << "Among which " << physMemUsed / KB << " KBytes are being used" << endl
+		 << "And " << physMemUsedByMe / KB << " KBytes are used by current process" << endl
+		 << "Usage rate is: " << physMemUsedByMe * 100.0 / physMemUsed << "%" << endl << endl;
+}
+
+
 int main(int argc, char* argv[]) {
 	/*
-    if ( argc != 3 ) {
-        cout << "Error! Correct usage: pc.exe #producers #consumers" << endl;
+    if ( argc != 4 ) {
+        cout << "Error! Correct usage: pc.exe [#producers] [#consumers] [timeToSleep] [mode]" << endl;
     	return -1;
 	}
 	
 	const int producers = atoi(argv[1]);
 	const int consumers = atoi(argv[2]);
-	//cout << producers << " " << consumers << endl;
+	const int timeToSleep = atoi(argv[3]);
+	const int mode = atoi(argv[4]);
+	
+	// Deal with invalid input.
+	if ( producers > 10 || producers <= 0 ) {
+		cout << "Wrong number of producers, range: [1, 10]" << endl;
+		return -1;
+	}
+	if ( consumers > 10 || consumers <= 0 ) {
+		cout << "Wrong number of consumers, range: [1, 10]" << endl;
+		return -1;
+	}
+	if ( timeToSleep < 1 || timeToSleep > 60 ) {
+		cout << "Wrong waiting time, range: [1, 60] seconds" << endl;
+		return -1;
+	}
+	if ( mode < 0 || mode > 2 ) {
+		cout << "Wrong mode, mode should be 0, 1 or 2" << endl;
+		return -1;
+	}
 	*/
+	
 	const int producers = 1;
 	const int consumers = 1;
 	const int timeToSleep = 10;
+	const int mode = 1;
 
-	// Init
-	counter = 0;
-	in = 0;
-	out = 0;
-	producerSleep = 0;
-	consumerSleep = 0;
-	producerRealOp = 0;
-	producerTotalOp = 0;
-	consumerRealOp = 0;
-	consumerTotalOp = 0;
+	init();
 	
-	memset(flag, 0, sizeof(flag));
-	turn = -1;
-	
-	Mutex = CreateMutex(NULL, FALSE, NULL);
-	Full = CreateSemaphore(NULL, 0, BUFFER_SIZE, NULL);
-	Empty = CreateSemaphore(NULL, BUFFER_SIZE, BUFFER_SIZE, NULL); 
-
 	// Thread
 	DWORD ProduderThreadId[10];
 	HANDLE ProducerThreadHandle[10];
@@ -197,33 +269,44 @@ int main(int argc, char* argv[]) {
 	HANDLE ConsumerThreadHandle[10];
 
 	// Create thread
+	LPTHREAD_START_ROUTINE producer = producer;
+	LPTHREAD_START_ROUTINE consumer = consumer;
+	if ( mode == 0 ) {
+		producer = producer0;
+		consumer = consumer0;
+	} else if ( mode == 1 ) {
+		producer = producer1;
+		consumer = consumer1;
+		
+		// Init
+		memset(flag, 0, sizeof(flag));
+		turn = -1;
+	} else if ( mode == 2 ) {
+		producer = producer2;
+		consumer = consumer2;
+		
+		// Init
+		Mutex = CreateMutex(NULL, FALSE, NULL);
+		Full = CreateSemaphore(NULL, 0, BUFFER_SIZE, NULL);
+		Empty = CreateSemaphore(NULL, BUFFER_SIZE, BUFFER_SIZE, NULL); 
+	}
+	
 	for ( int i = 0; i < producers; ++i ) {
-		ProducerThreadHandle[i] = CreateThread(NULL, 0, producer2, NULL, 0, &ProduderThreadId[i]);
+		ProducerThreadHandle[i] = CreateThread(NULL, 0, producer, NULL, 0, &ProduderThreadId[i]);
 		cout << "# Successfully created producer thread " << i << endl;
 	}
 	
 	for ( int i = 0; i < consumers; ++i ) {
-		ConsumerThreadHandle[i] = CreateThread(NULL, 0, consumer2, NULL, 0, &ConsumerThreadId[i]);
+		ConsumerThreadHandle[i] = CreateThread(NULL, 0, consumer, NULL, 0, &ConsumerThreadId[i]);
 		cout << "# Successfully created consumer thread " << i << endl;
 	}
 	
 	// Sleep
-	cout << endl << "Sleep for " << timeToSleep << " seconds" << endl << endl;
+	cout << endl << "Mode " << mode << ": Sleep for " << timeToSleep << " seconds" << endl << endl;
 	Sleep(timeToSleep * 1000);
 	
-	// Output buffer
-	cout << "Complete!" << endl;
-	cout << counter << " elements remained in buffer: " << endl;
-	for ( int i = 0; i < counter; ++i ) {
-		cout << buffer[i] << " ";
-	}
-	cout << endl;
-	
-	// Output performance info.
-	cout << "# of operations performed by producers: " << producerRealOp << endl
-		 << "# of operations tried by producers: " << producerTotalOp << endl
-		 << "# of operations performed by consumers: " << consumerRealOp << endl
-		 << "# of operations tried by consumers: " << consumerTotalOp << endl;
+	// Output performance info
+	displayPerformance();
 	
 	return 0;
 }
