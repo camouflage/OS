@@ -1,0 +1,1171 @@
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 1 1 10 0 
+# Successfully created consumer thread 0
+# Successfully created producer thread 0
+
+Mode 0: Sleep for 10 seconds
+
+Complete!
+3 elements remained in buffer: 
+18467 26500 15724 
+
+===========Operations Performed==========
+# of operations performed by producers: 17
+# of operations tried by producers: 17
+# of operations performed by consumers: 14
+# of operations tried by consumers: 18
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1938912 KBytes are being used
+And 340 KBytes are used by current process
+Usage rate is: 0.0175356%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1201444 KBytes are being used
+And 1740 KBytes are used by current process
+Usage rate is: 0.144826%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 1 1 10 1 
+# Successfully created consumer thread 0
+# Successfully created producer thread 0
+
+Mode 1: Sleep for 10 seconds
+
+Complete!
+1 elements remained in buffer: 
+25547 
+
+===========Operations Performed==========
+# of operations performed by producers: 92
+# of operations tried by producers: 92
+# of operations performed by consumers: 91
+# of operations tried by consumers: 3071360
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1937656 KBytes are being used
+And 344 KBytes are used by current process
+Usage rate is: 0.0177534%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1200064 KBytes are being used
+And 1740 KBytes are used by current process
+Usage rate is: 0.144992%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 1 1 10 2 
+# Successfully created consumer thread 0
+# Successfully created producer thread 0
+
+Mode 2: Sleep for 10 seconds
+
+Complete!
+0 elements remained in buffer: 
+
+
+===========Operations Performed==========
+# of operations performed by producers: 2435193
+# of operations tried by producers: 2435193
+# of operations performed by consumers: 2435193
+# of operations tried by consumers: 2435193
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1936508 KBytes are being used
+And 340 KBytes are used by current process
+Usage rate is: 0.0175574%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1198932 KBytes are being used
+And 1736 KBytes are used by current process
+Usage rate is: 0.144796%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 1 1 20 0 
+# Successfully created consumer thread 0
+# Successfully created producer thread 0
+
+Mode 0: Sleep for 20 seconds
+
+Complete!
+12 elements remained in buffer: 
+18467 26500 15724 29358 24464 28145 16827 491 11942 5436 14604 153 
+
+===========Operations Performed==========
+# of operations performed by producers: 42
+# of operations tried by producers: 42
+# of operations performed by consumers: 30
+# of operations tried by consumers: 34
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1929700 KBytes are being used
+And 340 KBytes are used by current process
+Usage rate is: 0.0176193%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1193912 KBytes are being used
+And 1736 KBytes are used by current process
+Usage rate is: 0.145404%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 1 1 20 1 
+# Successfully created consumer thread 0
+# Successfully created producer thread 0
+
+Mode 1: Sleep for 20 seconds
+
+Complete!
+1 elements remained in buffer: 
+16202 
+
+===========Operations Performed==========
+# of operations performed by producers: 263
+# of operations tried by producers: 263
+# of operations performed by consumers: 262
+# of operations tried by consumers: 3210896
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1902332 KBytes are being used
+And 344 KBytes are used by current process
+Usage rate is: 0.0180831%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1146724 KBytes are being used
+And 1744 KBytes are used by current process
+Usage rate is: 0.152085%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 1 1 20 2 
+# Successfully created consumer thread 0
+# Successfully created producer thread 0
+
+Mode 2: Sleep for 20 seconds
+
+Complete!
+0 elements remained in buffer: 
+
+
+===========Operations Performed==========
+# of operations performed by producers: 5233203
+# of operations tried by producers: 5233203
+# of operations performed by consumers: 5233203
+# of operations tried by consumers: 5233203
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1902080 KBytes are being used
+And 340 KBytes are used by current process
+Usage rate is: 0.0178752%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1146992 KBytes are being used
+And 1740 KBytes are used by current process
+Usage rate is: 0.151701%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 1 1 30 0 
+# Successfully created consumer thread 0
+# Successfully created producer thread 0
+
+Mode 0: Sleep for 30 seconds
+
+Complete!
+8 elements remained in buffer: 
+31115 29658 9930 2306 22386 28745 16827 491 
+
+===========Operations Performed==========
+# of operations performed by producers: 56
+# of operations tried by producers: 56
+# of operations performed by consumers: 48
+# of operations tried by consumers: 52
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1898500 KBytes are being used
+And 344 KBytes are used by current process
+Usage rate is: 0.0181196%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1144948 KBytes are being used
+And 1744 KBytes are used by current process
+Usage rate is: 0.152321%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 1 1 30 1 
+# Successfully created consumer thread 0
+# Successfully created producer thread 0
+
+Mode 1: Sleep for 30 seconds
+
+Complete!
+1 elements remained in buffer: 
+28321 
+
+===========Operations Performed==========
+# of operations performed by producers: 377
+# of operations tried by producers: 377
+# of operations performed by consumers: 376
+# of operations tried by consumers: 3108552
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1902696 KBytes are being used
+And 340 KBytes are used by current process
+Usage rate is: 0.0178694%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1152880 KBytes are being used
+And 1740 KBytes are used by current process
+Usage rate is: 0.150926%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 1 1 30 2 
+# Successfully created consumer thread 0
+# Successfully created producer thread 0
+
+Mode 2: Sleep for 30 seconds
+
+Complete!
+0 elements remained in buffer: 
+
+
+===========Operations Performed==========
+# of operations performed by producers: 6959357
+# of operations tried by producers: 6959357
+# of operations performed by consumers: 6959357
+# of operations tried by consumers: 6959357
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1912384 KBytes are being used
+And 340 KBytes are used by current process
+Usage rate is: 0.0177789%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1158804 KBytes are being used
+And 1740 KBytes are used by current process
+Usage rate is: 0.150155%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 1 1 40 0 
+# Successfully created consumer thread 0
+# Successfully created producer thread 0
+
+Mode 0: Sleep for 40 seconds
+
+Complete!
+9 elements remained in buffer: 
+31115 29658 9930 2306 22386 28745 19072 5829 15573 
+
+===========Operations Performed==========
+# of operations performed by producers: 77
+# of operations tried by producers: 77
+# of operations performed by consumers: 68
+# of operations tried by consumers: 72
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1847560 KBytes are being used
+And 340 KBytes are used by current process
+Usage rate is: 0.0184026%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1090736 KBytes are being used
+And 1736 KBytes are used by current process
+Usage rate is: 0.159159%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 1 1 40 1 
+# Successfully created consumer thread 0
+# Successfully created producer thread 0
+
+Mode 1: Sleep for 40 seconds
+
+Complete!
+1 elements remained in buffer: 
+23754 
+
+===========Operations Performed==========
+# of operations performed by producers: 612
+# of operations tried by producers: 612
+# of operations performed by consumers: 611
+# of operations tried by consumers: 2516896
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1846168 KBytes are being used
+And 340 KBytes are used by current process
+Usage rate is: 0.0184165%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1089780 KBytes are being used
+And 1740 KBytes are used by current process
+Usage rate is: 0.159665%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 1 1 40 2 
+# Successfully created consumer thread 0
+# Successfully created producer thread 0
+
+Mode 2: Sleep for 40 seconds
+
+Complete!
+0 elements remained in buffer: 
+
+
+===========Operations Performed==========
+# of operations performed by producers: 12038091
+# of operations tried by producers: 12038091
+# of operations performed by consumers: 12038091
+# of operations tried by consumers: 12038091
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1860260 KBytes are being used
+And 344 KBytes are used by current process
+Usage rate is: 0.018492%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1087952 KBytes are being used
+And 1744 KBytes are used by current process
+Usage rate is: 0.160301%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 1 1 50 0 
+# Successfully created consumer thread 0
+# Successfully created producer thread 0
+
+Mode 0: Sleep for 50 seconds
+
+Complete!
+11 elements remained in buffer: 
+31115 29658 9930 2306 22386 28745 19072 5829 15573 16512 13290 
+
+===========Operations Performed==========
+# of operations performed by producers: 97
+# of operations tried by producers: 97
+# of operations performed by consumers: 86
+# of operations tried by consumers: 90
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1858972 KBytes are being used
+And 340 KBytes are used by current process
+Usage rate is: 0.0182897%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1088376 KBytes are being used
+And 1740 KBytes are used by current process
+Usage rate is: 0.159871%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 1 1 50 1 
+# Successfully created consumer thread 0
+# Successfully created producer thread 0
+
+Mode 1: Sleep for 50 seconds
+
+Complete!
+0 elements remained in buffer: 
+
+
+===========Operations Performed==========
+# of operations performed by producers: 764
+# of operations tried by producers: 764
+# of operations performed by consumers: 764
+# of operations tried by consumers: 2564263
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1857292 KBytes are being used
+And 340 KBytes are used by current process
+Usage rate is: 0.0183062%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1087092 KBytes are being used
+And 1736 KBytes are used by current process
+Usage rate is: 0.159692%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 1 1 50 2 
+# Successfully created consumer thread 0
+# Successfully created producer thread 0
+
+Mode 2: Sleep for 50 seconds
+
+Complete!
+0 elements remained in buffer: 
+
+
+===========Operations Performed==========
+# of operations performed by producers: 14830295
+# of operations tried by producers: 14830295
+# of operations performed by consumers: 14830295
+# of operations tried by consumers: 14830295
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1859416 KBytes are being used
+And 340 KBytes are used by current process
+Usage rate is: 0.0182853%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1088456 KBytes are being used
+And 1736 KBytes are used by current process
+Usage rate is: 0.159492%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 1 1 60 0 
+# Successfully created consumer thread 0
+# Successfully created producer thread 0
+
+Mode 0: Sleep for 60 seconds
+
+Complete!
+11 elements remained in buffer: 
+7616 17451 5249 31556 30303 11008 32609 32702 20485 14343 1587 
+
+===========Operations Performed==========
+# of operations performed by producers: 115
+# of operations tried by producers: 115
+# of operations performed by consumers: 104
+# of operations tried by consumers: 108
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1859820 KBytes are being used
+And 344 KBytes are used by current process
+Usage rate is: 0.0184964%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1088964 KBytes are being used
+And 1740 KBytes are used by current process
+Usage rate is: 0.159785%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 1 1 60 1 
+# Successfully created consumer thread 0
+# Successfully created producer thread 0
+
+Mode 1: Sleep for 60 seconds
+
+Complete!
+0 elements remained in buffer: 
+
+
+===========Operations Performed==========
+# of operations performed by producers: 870
+# of operations tried by producers: 870
+# of operations performed by consumers: 870
+# of operations tried by consumers: 1739933
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1879052 KBytes are being used
+And 340 KBytes are used by current process
+Usage rate is: 0.0180942%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1099436 KBytes are being used
+And 1736 KBytes are used by current process
+Usage rate is: 0.157899%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 1 1 60 2 
+# Successfully created consumer thread 0
+# Successfully created producer thread 0
+
+Mode 2: Sleep for 60 seconds
+
+Complete!
+0 elements remained in buffer: 
+
+
+===========Operations Performed==========
+# of operations performed by producers: 18254003
+# of operations tried by producers: 18254003
+# of operations performed by consumers: 18254003
+# of operations tried by consumers: 18254003
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1878500 KBytes are being used
+And 336 KBytes are used by current process
+Usage rate is: 0.0178866%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1098440 KBytes are being used
+And 1736 KBytes are used by current process
+Usage rate is: 0.158042%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 3 1 20 0 
+# Successfully created consumer thread 0
+# Successfully created producer thread 0
+# Successfully created producer thread 1
+# Successfully created producer thread 2
+
+Mode 0: Sleep for 20 seconds
+
+Complete!
+50 elements remained in buffer: 
+11538 19912 19912 19912 26299 26299 26299 9894 9894 9894 23811 23811 23811 30333 30333 30333 4664 4664 4664 7711 7711 7711 6868 6868 27644 27644 32757 9741 778 30106 22648 6729 15350 3548 153 153 12382 12382 12382 18716 18716 18716 19895 19895 19895 21726 21726 21726 11538 11538 
+
+===========Operations Performed==========
+# of operations performed by producers: 84
+# of operations tried by producers: 123
+# of operations performed by consumers: 34
+# of operations tried by consumers: 34
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1911620 KBytes are being used
+And 388 KBytes are used by current process
+Usage rate is: 0.0202969%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1158892 KBytes are being used
+And 1772 KBytes are used by current process
+Usage rate is: 0.152905%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 3 1 20 1 
+# Successfully created consumer thread 0
+# Successfully created producer thread 0
+# Successfully created producer thread 1
+# Successfully created producer thread 2
+
+Mode 1: Sleep for 20 seconds
+
+Complete!
+1 elements remained in buffer: 
+4833 
+
+===========Operations Performed==========
+# of operations performed by producers: 135
+# of operations tried by producers: 135
+# of operations performed by consumers: 134
+# of operations tried by consumers: 2970115
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1908400 KBytes are being used
+And 384 KBytes are used by current process
+Usage rate is: 0.0201216%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1152224 KBytes are being used
+And 1768 KBytes are used by current process
+Usage rate is: 0.153442%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 3 1 20 2 
+# Successfully created consumer thread 0
+# Successfully created producer thread 0
+# Successfully created producer thread 1
+# Successfully created producer thread 2
+
+Mode 2: Sleep for 20 seconds
+
+Complete!
+49 elements remained in buffer: 
+11652 10233 27085 27374 30577 24223 15804 21584 14631 11681 18480 11373 4779 8702 6693 29919 9708 1327 22312 3677 21552 1446 16271 25535 22524 18507 14666 32272 9998 21170 13413 21098 9577 31772 28786 24424 14724 17292 4727 8052 4883 7027 14099 15933 16650 19709 29669 26146 23454 
+
+===========Operations Performed==========
+# of operations performed by producers: 5059645
+# of operations tried by producers: 5059645
+# of operations performed by consumers: 5059596
+# of operations tried by consumers: 5059596
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1908688 KBytes are being used
+And 392 KBytes are used by current process
+Usage rate is: 0.0205377%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1153820 KBytes are being used
+And 1776 KBytes are used by current process
+Usage rate is: 0.153923%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 1 3 20 0 
+# Successfully created consumer thread 0
+# Successfully created consumer thread 1
+# Successfully created producer thread 0
+# Successfully created consumer thread 2
+
+Mode 0: Sleep for 20 seconds
+
+Complete!
+2 elements remained in buffer: 
+18467 26500 
+
+===========Operations Performed==========
+# of operations performed by producers: 42
+# of operations tried by producers: 42
+# of operations performed by consumers: 40
+# of operations tried by consumers: 102
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1907352 KBytes are being used
+And 388 KBytes are used by current process
+Usage rate is: 0.0203423%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1155224 KBytes are being used
+And 1772 KBytes are used by current process
+Usage rate is: 0.15339%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 1 3 20 1 
+# Successfully created consumer thread 0
+# Successfully created consumer thread 1
+# Successfully created producer thread 0
+# Successfully created consumer thread 2
+
+Mode 1: Sleep for 20 seconds
+
+Complete!
+0 elements remained in buffer: 
+
+
+===========Operations Performed==========
+# of operations performed by producers: 138
+# of operations tried by producers: 138
+# of operations performed by consumers: 138
+# of operations tried by consumers: 5606271
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1909152 KBytes are being used
+And 392 KBytes are used by current process
+Usage rate is: 0.0205327%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1157008 KBytes are being used
+And 1772 KBytes are used by current process
+Usage rate is: 0.153154%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 1 3 20 2 
+# Successfully created consumer thread 0
+# Successfully created consumer thread 1
+# Successfully created producer thread 0
+# Successfully created consumer thread 2
+
+Mode 2: Sleep for 20 seconds
+
+Complete!
+2 elements remained in buffer: 
+7306 28233 
+
+===========Operations Performed==========
+# of operations performed by producers: 5501061
+# of operations tried by producers: 5501061
+# of operations performed by consumers: 5501059
+# of operations tried by consumers: 5501059
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1907736 KBytes are being used
+And 388 KBytes are used by current process
+Usage rate is: 0.0203382%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1156600 KBytes are being used
+And 1768 KBytes are used by current process
+Usage rate is: 0.152862%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 2 2 20 0 
+# Successfully created consumer thread 0
+# Successfully created consumer thread 1
+# Successfully created producer thread 0
+# Successfully created producer thread 1
+
+Mode 0: Sleep for 20 seconds
+
+Complete!
+24 elements remained in buffer: 
+27644 27644 32757 32757 12859 12859 9741 9741 778 778 3035 3035 1842 1842 30106 30106 8942 8942 22648 22648 23805 23805 6729 6729 
+
+===========Operations Performed==========
+# of operations performed by producers: 84
+# of operations tried by producers: 84
+# of operations performed by consumers: 60
+# of operations tried by consumers: 68
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1910416 KBytes are being used
+And 392 KBytes are used by current process
+Usage rate is: 0.0205191%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1159432 KBytes are being used
+And 1772 KBytes are used by current process
+Usage rate is: 0.152833%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 2 2 20 1 
+# Successfully created consumer thread 0
+# Successfully created consumer thread 1
+# Successfully created producer thread 0
+# Successfully created producer thread 1
+
+Mode 1: Sleep for 20 seconds
+
+Complete!
+0 elements remained in buffer: 
+
+
+===========Operations Performed==========
+# of operations performed by producers: 115
+# of operations tried by producers: 115
+# of operations performed by consumers: 115
+# of operations tried by consumers: 6063304
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1912040 KBytes are being used
+And 384 KBytes are used by current process
+Usage rate is: 0.0200833%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1160496 KBytes are being used
+And 1768 KBytes are used by current process
+Usage rate is: 0.152349%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 2 2 20 2 
+# Successfully created consumer thread 0
+# Successfully created consumer thread 1
+# Successfully created producer thread 0
+# Successfully created producer thread 1
+
+Mode 2: Sleep for 20 seconds
+
+Complete!
+0 elements remained in buffer: 
+
+
+===========Operations Performed==========
+# of operations performed by producers: 5537458
+# of operations tried by producers: 5537458
+# of operations performed by consumers: 5537458
+# of operations tried by consumers: 5537458
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1913096 KBytes are being used
+And 388 KBytes are used by current process
+Usage rate is: 0.0202813%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1160388 KBytes are being used
+And 1772 KBytes are used by current process
+Usage rate is: 0.152708%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 5 1 20 0 
+# Successfully created consumer thread 0
+# Successfully created producer thread 0
+# Successfully created producer thread 1
+# Successfully created producer thread 2
+# Successfully created producer thread 3
+# Successfully created producer thread 4
+
+Mode 0: Sleep for 20 seconds
+
+Complete!
+49 elements remained in buffer: 
+14604 14604 14604 14604 14604 153 153 153 153 153 12382 12382 12382 12382 18716 19895 21726 19912 26299 26299 23811 30333 7711 6868 27644 27644 32757 9741 778 30106 23805 6729 15350 3548 16827 491 491 491 491 491 11942 11942 11942 11942 11942 5436 5436 5436 5436 
+
+===========Operations Performed==========
+# of operations performed by producers: 84
+# of operations tried by producers: 210
+# of operations performed by consumers: 35
+# of operations tried by consumers: 35
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1878896 KBytes are being used
+And 428 KBytes are used by current process
+Usage rate is: 0.0227793%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1063176 KBytes are being used
+And 1796 KBytes are used by current process
+Usage rate is: 0.168928%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 5 1 20 1 
+# Successfully created consumer thread 0
+# Successfully created producer thread 0
+# Successfully created producer thread 1
+# Successfully created producer thread 2
+# Successfully created producer thread 3
+# Successfully created producer thread 4
+
+Mode 1: Sleep for 20 seconds
+
+Complete!
+0 elements remained in buffer: 
+
+
+===========Operations Performed==========
+# of operations performed by producers: 101
+# of operations tried by producers: 101
+# of operations performed by consumers: 101
+# of operations tried by consumers: 2426214
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1875676 KBytes are being used
+And 432 KBytes are used by current process
+Usage rate is: 0.0230317%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1054408 KBytes are being used
+And 1800 KBytes are used by current process
+Usage rate is: 0.170712%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 5 1 20 2 
+# Successfully created consumer thread 0
+# Successfully created producer thread 0
+# Successfully created producer thread 1
+# Successfully created producer thread 2
+# Successfully created producer thread 3
+# Successfully created producer thread 4
+
+Mode 2: Sleep for 20 seconds
+
+Complete!
+50 elements remained in buffer: 
+4626 10077 12118 10746 27197 16420 31287 9132 28479 3304 6641 32020 10809 18025 45 20781 30195 10521 17323 21437 19329 27624 32081 7312 21348 29341 31104 13516 21775 7708 6254 3775 15845 634 30428 32057 12190 28719 21553 16400 5394 6942 7173 19303 8796 28854 19934 21210 14652 6044 
+
+===========Operations Performed==========
+# of operations performed by producers: 5934093
+# of operations tried by producers: 5934093
+# of operations performed by consumers: 5934043
+# of operations tried by consumers: 5934043
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1875196 KBytes are being used
+And 428 KBytes are used by current process
+Usage rate is: 0.0228243%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 1047236 KBytes are being used
+And 1796 KBytes are used by current process
+Usage rate is: 0.171499%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 1 5 20 0 
+# Successfully created consumer thread 0
+# Successfully created consumer thread 1
+# Successfully created producer thread 0
+# Successfully created consumer thread 2
+# Successfully created consumer thread 3
+# Successfully created consumer thread 4
+
+Mode 0: Sleep for 20 seconds
+
+Complete!
+0 elements remained in buffer: 
+
+
+===========Operations Performed==========
+# of operations performed by producers: 42
+# of operations tried by producers: 42
+# of operations performed by consumers: 42
+# of operations tried by consumers: 175
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1876644 KBytes are being used
+And 424 KBytes are used by current process
+Usage rate is: 0.0225935%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 968280 KBytes are being used
+And 1792 KBytes are used by current process
+Usage rate is: 0.18507%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 1 5 20 1 
+# Successfully created consumer thread 0
+# Successfully created consumer thread 1
+# Successfully created producer thread 0
+# Successfully created consumer thread 2
+# Successfully created consumer thread 3
+# Successfully created consumer thread 4
+
+Mode 1: Sleep for 20 seconds
+
+Complete!
+0 elements remained in buffer: 
+
+
+===========Operations Performed==========
+# of operations performed by producers: 89
+# of operations tried by producers: 89
+# of operations performed by consumers: 89
+# of operations tried by consumers: 5644109
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1891488 KBytes are being used
+And 424 KBytes are used by current process
+Usage rate is: 0.0224162%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 975600 KBytes are being used
+And 1792 KBytes are used by current process
+Usage rate is: 0.183682%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 1 5 20 2 
+# Successfully created consumer thread 0
+# Successfully created consumer thread 1
+# Successfully created producer thread 0
+# Successfully created consumer thread 2
+# Successfully created consumer thread 3
+# Successfully created consumer thread 4
+
+Mode 2: Sleep for 20 seconds
+
+Complete!
+0 elements remained in buffer: 
+
+
+===========Operations Performed==========
+# of operations performed by producers: 5151636
+# of operations tried by producers: 5151636
+# of operations performed by consumers: 5151636
+# of operations tried by consumers: 5151636
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1878428 KBytes are being used
+And 428 KBytes are used by current process
+Usage rate is: 0.022785%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 966020 KBytes are being used
+And 1796 KBytes are used by current process
+Usage rate is: 0.185917%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 3 3 20 0 
+# Successfully created consumer thread 0
+# Successfully created consumer thread 1
+# Successfully created producer thread 0
+# Successfully created producer thread 1
+# Successfully created consumer thread 2
+# Successfully created producer thread 2
+
+Mode 0: Sleep for 20 seconds
+
+Complete!
+33 elements remained in buffer: 
+8942 8942 22648 22648 22648 23805 23805 23805 6729 6729 6729 15350 15350 15350 31101 31101 31101 3548 3548 3548 12623 12623 12623 19954 19954 19954 27644 27644 32757 32757 32757 12859 12859 
+
+===========Operations Performed==========
+# of operations performed by producers: 126
+# of operations tried by producers: 126
+# of operations performed by consumers: 93
+# of operations tried by consumers: 105
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1878684 KBytes are being used
+And 424 KBytes are used by current process
+Usage rate is: 0.022569%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 907544 KBytes are being used
+And 1792 KBytes are used by current process
+Usage rate is: 0.197456%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 3 3 20 1 
+# Successfully created consumer thread 0
+# Successfully created consumer thread 1
+# Successfully created producer thread 0
+# Successfully created producer thread 1
+# Successfully created consumer thread 2
+# Successfully created producer thread 2
+
+Mode 1: Sleep for 20 seconds
+
+Complete!
+0 elements remained in buffer: 
+
+
+===========Operations Performed==========
+# of operations performed by producers: 206
+# of operations tried by producers: 206
+# of operations performed by consumers: 206
+# of operations tried by consumers: 5594952
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1878100 KBytes are being used
+And 428 KBytes are used by current process
+Usage rate is: 0.022789%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 909924 KBytes are being used
+And 1796 KBytes are used by current process
+Usage rate is: 0.197379%
+
+====================END====================
+
+
+C:\Users\Sheng\Desktop\OS\project2>pc.exe 3 3 20 2 
+# Successfully created consumer thread 0
+# Successfully created consumer thread 1
+# Successfully created producer thread 0
+# Successfully created producer thread 1
+# Successfully created consumer thread 2
+# Successfully created producer thread 2
+
+Mode 2: Sleep for 20 seconds
+
+Complete!
+46 elements remained in buffer: 
+28354 26556 1057 11310 24573 10467 16227 20977 3868 21637 13407 24292 21837 19174 10339 19738 22987 8396 1849 20961 31380 1146 26307 7973 6479 11873 27365 18101 2985 11711 1474 17053 15249 4625 12234 29929 29489 30423 11943 22102 26595 25993 3914 8537 21034 16659 
+
+===========Operations Performed==========
+# of operations performed by producers: 5684843
+# of operations tried by producers: 5684843
+# of operations performed by consumers: 5684797
+# of operations tried by consumers: 5684797
+
+==========Virtual Memory Usage==========
+There are 4848948 KBytes of virtual memory
+Among which 1877736 KBytes are being used
+And 424 KBytes are used by current process
+Usage rate is: 0.0225804%
+
+==========Physical Memory Usage==========
+There are 1834292 KBytes of physical memory
+Among which 911228 KBytes are being used
+And 1792 KBytes are used by current process
+Usage rate is: 0.196658%
+
+====================END====================
+
+

@@ -96,7 +96,7 @@ DWORD WINAPI producer0(LPVOID param) {
 
 // Producer1: Peterson's solution.
 DWORD WINAPI producer1(LPVOID param) {
-	while ( true ) {
+	while ( true ) {	
 		flag[0] = true;
 		turn = 1;
 		while ( flag[1] && turn == 1 );
@@ -225,8 +225,7 @@ void displayPerformance() {
 
 
 int main(int argc, char* argv[]) {
-	/*
-    if ( argc != 4 ) {
+    if ( argc != 5 ) {
         cout << "Error! Correct usage: pc.exe [#producers] [#consumers] [timeToSleep] [mode]" << endl;
     	return -1;
 	}
@@ -253,35 +252,36 @@ int main(int argc, char* argv[]) {
 		cout << "Wrong mode, mode should be 0, 1 or 2" << endl;
 		return -1;
 	}
-	*/
 	
+	/*
 	const int producers = 1;
 	const int consumers = 1;
 	const int timeToSleep = 10;
-	const int mode = 1;
-
+	const int mode = 2;
+	*/
+	
 	init();
 	
-	// Thread
+	// Thread info
 	DWORD ProduderThreadId[10];
 	HANDLE ProducerThreadHandle[10];
 	DWORD ConsumerThreadId[10];
 	HANDLE ConsumerThreadHandle[10];
 
-	// Create thread
+	// Create thread according to the mode
 	LPTHREAD_START_ROUTINE producer = producer;
 	LPTHREAD_START_ROUTINE consumer = consumer;
-	if ( mode == 0 ) {
+	if ( mode == 0 ) { // mode0: Sleep for random amount of time
 		producer = producer0;
 		consumer = consumer0;
-	} else if ( mode == 1 ) {
+	} else if ( mode == 1 ) { // mode1: Peterson's solution
 		producer = producer1;
 		consumer = consumer1;
 		
 		// Init
 		memset(flag, 0, sizeof(flag));
 		turn = -1;
-	} else if ( mode == 2 ) {
+	} else if ( mode == 2 ) { // mode2: Using Mutex locks and Semaphores
 		producer = producer2;
 		consumer = consumer2;
 		
@@ -291,14 +291,33 @@ int main(int argc, char* argv[]) {
 		Empty = CreateSemaphore(NULL, BUFFER_SIZE, BUFFER_SIZE, NULL); 
 	}
 	
-	for ( int i = 0; i < producers; ++i ) {
-		ProducerThreadHandle[i] = CreateThread(NULL, 0, producer, NULL, 0, &ProduderThreadId[i]);
-		cout << "# Successfully created producer thread " << i << endl;
-	}
-	
-	for ( int i = 0; i < consumers; ++i ) {
-		ConsumerThreadHandle[i] = CreateThread(NULL, 0, consumer, NULL, 0, &ConsumerThreadId[i]);
-		cout << "# Successfully created consumer thread " << i << endl;
+	// Number of producers and consumers created up till now.
+	int pcount = 0;
+	int ccount = 0;
+	while ( 1 ) {
+		int who = rand() % 2;
+		// Randomly create producer or consumer thread.
+		if ( who == 0 && pcount < producers ) {
+			ProducerThreadHandle[pcount] = CreateThread(NULL, 0, producer, NULL, 0, &ProduderThreadId[pcount]);
+			cout << "# Successfully created producer thread " << pcount << endl;
+			++pcount;
+		} else if ( who == 1 && ccount < consumers ) {
+			ConsumerThreadHandle[ccount] = CreateThread(NULL, 0, consumer, NULL, 0, &ConsumerThreadId[ccount]);
+			cout << "# Successfully created consumer thread " << ccount << endl;
+			++ccount;
+		} else if ( pcount == producers && ccount == consumers ) {
+			break;
+		} else if ( pcount == producers ) {
+			for ( ; ccount < consumers; ++ccount ) {
+				ConsumerThreadHandle[ccount] = CreateThread(NULL, 0, consumer, NULL, 0, &ConsumerThreadId[ccount]);
+				cout << "# Successfully created consumer thread " << ccount << endl;
+			}
+		} else if ( ccount == consumers ) {
+			for ( ; pcount < producers; ++pcount ) {
+				ProducerThreadHandle[pcount] = CreateThread(NULL, 0, producer, NULL, 0, &ProduderThreadId[pcount]);
+				cout << "# Successfully created producer thread " << pcount << endl;
+			}
+		}
 	}
 	
 	// Sleep
@@ -307,6 +326,7 @@ int main(int argc, char* argv[]) {
 	
 	// Output performance info
 	displayPerformance();
+	cout << "====================END====================" << endl << endl;
 	
 	return 0;
 }
