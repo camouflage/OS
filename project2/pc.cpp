@@ -253,7 +253,7 @@ int main(int argc, char* argv[]) {
 		return -1;
 	}
 	
-	/*
+	/* Only for test
 	const int producers = 1;
 	const int consumers = 1;
 	const int timeToSleep = 10;
