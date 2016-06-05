@@ -11,8 +11,8 @@ using namespace std;
 int main(int argc, char* argv[]) {
 	clock_t begin = clock();
 	
-	if ( argc != 3 ) {
-		cout << "Error! Correct usage: mmSort.exe [0/1] fileName" << endl;
+	if ( argc != 2 ) {
+		cout << "Error! Correct usage: mmSort.exe [0/1]" << endl;
     	return -1;
 	}
 	
@@ -20,7 +20,7 @@ int main(int argc, char* argv[]) {
 	int a[number];
 	
 	if ( atoi(argv[1]) == 0 ) { // Ordinary File IO
-		fstream fs(argv[2], fstream::in);
+		fstream fs("number.txt", fstream::in);
 	
 		for ( int i = 0; i < number; ++i ) {
 			fs >> a[i];
@@ -34,7 +34,7 @@ int main(int argc, char* argv[]) {
 		
 		// https://msdn.microsoft.com/en-us/library/windows/desktop/aa363778(v=vs.85).aspx
 		hFile = CreateFile(
-				TEXT(argv[2]), 	  // open number.txt
+				TEXT("number.txt"), 	  // open number.txt
 	            GENERIC_READ,             // open for reading
 	            0,          			  // no sharing
 	            NULL,                     // no security
@@ -98,8 +98,8 @@ int main(int argc, char* argv[]) {
 	}
 
 	fstream fs("sorted.txt", fstream::out);
-	for ( int i = 1; i < number; ++i ) {
-	   	fs << a[i] << " ";
+	for ( int i = 0; i < number; ++i ) {
+	   	fs << a[i] << endl;
 	}
 	
 	clock_t end = clock();
